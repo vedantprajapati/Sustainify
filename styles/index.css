@@ -77,6 +77,16 @@ p {
 }
 
 .Sources {
-  font-size: 0.2em;
+  font-size: 0.3em;
   color: black;
+}
+
+.events {
+  background: rgb(175, 170, 95);
+  margin: 80px 150px 80px 150px;
+  border: 20px solid rgb(196, 192, 124);
+}
+
+button {
+  margin: 5px 25px 25px 25px;
 }
