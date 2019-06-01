@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <!--  Meta  -->
@@ -51,8 +52,8 @@
         });
         // The marker, positioned at Waterloo
         var data =
-          '[{"lat" : "43.469761", "long" : "-80.538811","type":"transport"},{"lat" : "43.4696", "long" : "-80.5389","type":"transport"}]';
-        var events = JSON.parse(data);
+          '[{"lat" : "43.469761", "long" : "-80.538811","name":"Transportation 1","type":"transport","description":"Testing description #1"},{"lat" : "43.4696", "long" : "-80.5389","name":"Transportation name 2","type":"transport","description":"Testing description #2"}]';
+        events = JSON.parse(data);
         for (i = 0; i < events.length; i++) {
           var lax = parseFloat(events[i].lat);
           var lung = parseFloat(events[i].long);
@@ -66,6 +67,29 @@
         }
       }
     </script>
+
+    <div class="events">
+      <h2>Upcomming Events</h2>
+      <button onclick="getEvents()">See Events</button>
+      <div id="demo"></div>
+      <script>
+        function getEvents() {
+          var x = "",
+            i = 0;
+          for (i; i < events.length; i++) {
+            x =
+              "<h3>" +
+              events[i].name +
+              "</h3>" +
+              "<p>" +
+              events[i].description +
+              "</p>";
+            document.getElementById("demo").innerHTML += x;
+          }
+        }
+      </script>
+    </div>
+
     <div class="text">
       <h2>
         About Us
@@ -110,7 +134,7 @@
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsV-SVZw5rSJ6u6o35ibu0MgElAhMffB8&callback=initMap"
     ></script>
-    <div>
+    <div class="Sources">
       Icons made by
       <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from
       <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
