@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <script src="events.js"></script>
   </head>
 
   <body>
@@ -51,9 +52,7 @@
           center: waterloo
         });
         // The marker, positioned at Waterloo
-        var data =
-          '[{"lat" : "43.469761", "long" : "-80.538811","name":"Transportation 1","type":"transport","description":"Testing description #1"},{"lat" : "43.4696", "long" : "-80.5389","name":"Transportation name 2","type":"transport","description":"Testing description #2"}]';
-        events = JSON.parse(data);
+        events = DATA;
         for (i = 0; i < events.length; i++) {
           var lax = parseFloat(events[i].lat);
           var lung = parseFloat(events[i].long);
