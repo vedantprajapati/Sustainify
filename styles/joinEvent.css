@@ -41,3 +41,11 @@ a {
 #wrapper{
     display:flex;
 }
+
+#map {
+    margin: 50px auto 50px auto;
+    width: 60%;
+    height: 500px;
+    background-color: grey;
+    border: 5px solid rgb(43, 53, 45);
+  }
