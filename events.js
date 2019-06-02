@@ -13,7 +13,7 @@ var DATA = [
     "type": "food", 
     "description": "Testing description #2",
     "meetup":"DC" 
-    }
+    },
     {"lat": "43.4700", 
     "long": "-80.5400", 
     "name": "Event 1", 
