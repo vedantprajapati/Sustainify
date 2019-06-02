@@ -67,23 +67,28 @@
       }
     </script>
 
-    <div class="events">
-      <h2>Upcomming Events</h2>
-      <button onclick="getEvents()">See Events</button>
-      <div id="demo"></div>
+    <div id="demo"></div>
       <script>
+        count = true;
         function getEvents() {
           var x = "",
+            y = "",
             i = 0;
-          for (i; i < events.length; i++) {
-            x =
-              "<h3>" +
-              events[i].name +
-              "</h3>" +
-              "<p>" +
-              events[i].description +
-              "</p>";
-            document.getElementById("demo").innerHTML += x;
+          if (count == true) {
+            for (i; i < events.length; i++) {
+              x =
+                "<h3>" +
+                events[i].name +
+                "</h3>" +
+                "<p>" +
+                events[i].description +
+                "</p>";
+              document.getElementById("demo").innerHTML += x;
+              count = false;
+            }
+          } else {
+            document.getElementById("demo").innerHTML = "";
+            count = true;
           }
         }
       </script>
