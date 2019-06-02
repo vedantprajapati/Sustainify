@@ -6,8 +6,20 @@
         </title>
         <script src="userlist.js"></script>
         <script src="events.js"></script>
+        <link href="styles/portal.css" rel="stylesheet"/>
     </head>
     <body>
+        <div id="dashboard">
+            <div>
+            <ul id="joinCreate">
+            <li><a href="joinEvent.html">Join event</a></li>
+            <li><a>Organize event</a></li>
+            </ul>
+            </div>
+            <div id="rewards">
+            <a>Rewards</a>
+            </div>
+        </div>
         <script>
         user = sessionStorage.getItem("data");
         users = USERLIST;
@@ -29,5 +41,57 @@
             }
         }
         </script>
+        <div id="map"></div>
+        <script>
+          // Initialize and add the map
+          function initMap() {
+            var icons = {
+              events: {
+                icon:
+                  "https://files.slack.com/files-pri/TJC615MQW-FJV540KUJ/forest.png"
+              },
+              restaurant: {
+                icon:
+                  "https://files.slack.com/files-pri/TJC615MQW-FK62DS936/restaurant.png"
+              },
+              transport: {
+                icon:
+                  "https://files.slack.com/files-pri/TJC615MQW-FK8NMK69L/bicycle__1_.png"
+              }
+            };
+            // The location of Waterloo
+            var waterloo = { lat: 43.469761, lng: -80.538811 };
+            // The map, centered at Waterloo
+            var map = new google.maps.Map(document.getElementById("map"), {
+              zoom: 15,
+              center: waterloo
+            });
+            // The marker, positioned at Waterloo
+            events = DATA;
+            for (i = 0; i < events.length; i++) {
+              var lax = parseFloat(events[i].lat);
+              var lung = parseFloat(events[i].long);
+              var icun = events[i].type;
+              var pos = { lat: lax, lng: lung };
+              var marker = new google.maps.Marker({
+                position: pos,
+                icon: icons[events[i].type].icon,
+                map: map
+              });
+            }
+          }
+        </script>
+        <script
+        async
+        defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsV-SVZw5rSJ6u6o35ibu0MgElAhMffB8&callback=initMap"
+      ></script>
+      <div id="addAnEvent">
+          <h1>
+              <a>
+                  Add an event.
+              </a>
+          </h1>
+      </div>
     </body>
 </html>

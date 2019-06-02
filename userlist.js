@@ -1,9 +1,17 @@
-var USERLIST = 
-[{
+var USERLIST = [
+    {
     "username":"josephsawaya",
     "password":"uoftisbetter",
     "events":[{ 
-        "event":"event1"},
-        {"event":"event2"
+        "event":"NewHacks"},
+        {"event":"Sanford Fleming"
     }]
-}];
+    },
+    {
+    "username":"vedantprajapati",
+    "password":"uoftisbetter",
+    "events":
+        [{"event":"UWEnergyHacks"},
+        {"event":"Myhal"}]
+    }
+];

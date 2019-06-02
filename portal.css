@@ -1,0 +1,75 @@
+#main {
+    width:30%;
+    margin:0 auto;
+    text-align: center;
+        background: rgb(84, 197, 99);
+        margin: 80px auto;
+        border: 20px solid rgb(145, 233, 167);
+}
+
+body{
+    margin:0;
+    font-family: "Montserrat", sans-serif;
+    background-image: url("https://slack-imgs.com/?c=1&url=https%3A%2F%2Fi.imgur.com%2F0lrsVFx.jpg");
+    background-attachment: fixed;
+}
+
+h1{
+    margin:20px 0;
+}
+
+h3{
+    margin:10px 0;
+}
+
+#dashboard {
+    display:flex;
+    background-color:rgb(43, 53, 45);
+    color:white;
+    font-size: 1.2em;
+}
+
+#joinCreate{
+    display:flex;
+}
+
+#joinCreate{ 
+    display:flex;
+}
+
+#map {
+    margin: 50px auto 50px auto;
+    width: 60%;
+    height: 500px;
+    background-color: grey;
+    border: 5px solid rgb(43, 53, 45);
+  }
+
+
+  #addAnEvent h1{
+     text-align:center;
+     margin: auto;
+  }
+
+ul {
+    list-style:none;
+}
+ul li {
+    margin:15px;
+}
+
+#rewards {
+    margin: auto 30px auto auto;
+}
+
+#addAnEvent {
+    background: rgb(84, 197, 99);
+    margin: 80px auto;
+    border: 20px solid rgb(145, 233, 167);
+    width:30%;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Join an event
+        </title>
+        <script src="events.js"></script>
+        <link href="styles/joinEvent.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="menu">
+                <a href="portal.html">Back</a>
+            </div>
+        </div>
+        <div id="main">
+            <script>
+                var events = DATA;
+                for(i=0;i<events.length;i++){
+                    var writeThis= "<div class='event'>"+"<h2>" + events[i].name + "</h2>" + "<button> Sign up </button>" + "</div>";
+                    document.getElementById("main").innerHTML+= writeThis;
+                }
+            </script>
+        </div>
+    </body>
+</html>

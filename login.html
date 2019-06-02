@@ -14,6 +14,7 @@
                     if(users[i].password == document.forms["myForm"]["Password"].value){
                         sessionStorage.setItem("data",users[i].username);
                         window.location.href = "portal.html";
+                        return true;
                     }else{
                         alert("wrong password or username");
                         return false;
