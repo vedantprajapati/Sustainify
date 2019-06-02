@@ -1,7 +1,7 @@
 var USERLIST = [
     {
     "username":"josephsawaya",
-    "password":"uoftisbetter",
+    "password":"skule",
     "events":[{ 
         "event":"NewHacks"},
         {"event":"Sanford Fleming"
@@ -9,14 +9,14 @@ var USERLIST = [
     },
     {
     "username":"vedantprajapati",
-    "password":"uoftisbetter",
+    "password":"skule",
     "events":
         [{"event":"UWEnergyHacks"},
         {"event":"Myhal"}]
     },
     {
         "username":"justinchongkit",
-        "password":"uoftisbetter",
+        "password":"skule",
         "events":
       [{"event":"UWEnergyHacks"},
         {"event":"Myhal"}]
