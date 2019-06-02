@@ -13,5 +13,12 @@ var USERLIST = [
     "events":
         [{"event":"UWEnergyHacks"},
         {"event":"Myhal"}]
+    },
+    {
+        "username":"justinchongkit",
+        "password":"uoftisbetter",
+        "events":
+      [{"event":"UWEnergyHacks"},
+        {"event":"Myhal"}]
     }
 ];
