@@ -2,11 +2,13 @@
  * index.scss
  * - Add any styles you want here!
  */
-
-body {
+ html{
+  background: rgb(43, 53, 45);
+ }
+ body {
   background-image: url("https://slack-imgs.com/?c=1&url=https%3A%2F%2Fi.imgur.com%2F0lrsVFx.jpg");
-  background-size: 110% 110%;
   background-color: #ffffff;
+  background-attachment: fixed;
   font-family: "Montserrat", sans-serif;
   margin: 0;
 }
@@ -89,4 +91,15 @@ p {
 
 button {
   margin: 5px 25px 25px 25px;
+}
+
+.Sources {
+  text-decoration: none;
+  color:white;
+  padding:10px;
+}
+
+.Sources a{
+  text-decoration: none;
+  color: white;
 }
