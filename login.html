@@ -12,7 +12,6 @@
             for(i=0;i<users.length;i++){
                 if (users[i].username == document.forms["myForm"]["Username"].value){
                     if(users[i].password == document.forms["myForm"]["Password"].value){
-                        console.log(users.length);
                         sessionStorage.setItem("data",users[i].username);
                         window.location.href = "portal.html";
                         return true;
