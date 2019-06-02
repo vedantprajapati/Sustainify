@@ -21,8 +21,8 @@
         Sustainify
       </h1>
       <ul>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Login</a></li>
       </ul>
     </div>
     <!--The div element for the map -->
@@ -63,11 +63,23 @@
             icon: icons[events[i].type].icon,
             map: map
           });
+          var contentString =
+            "<h2>" + events[i].name + "</h2>" + events[i].description;
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+          marker.addListener("click", function() {
+            infowindow.open(map, marker);
+          });
         }
       }
     </script>
 
-    <div id="demo"></div>
+    <div class="events">
+      <h2>Upcoming Events</h2>
+      <button onclick="getEvents()">See Events</button>
+
+      <div id="demo"></div>
       <script>
         count = true;
         function getEvents() {
@@ -93,6 +105,7 @@
         }
       </script>
     </div>
+
     <div class="text">
       <h2>
         About Us
@@ -118,16 +131,17 @@
       <p>
         Clubs and event organizers will sign up for an account on Sustainify to
         create and publish sustainability-focused events on our website. These
-        events will be put on the campus map and all users will be able to find
-        out more information about this event and register to take part. After
-        the event takes place, users will be able to check-in with the hosts and
-        to cofirm event attendance.
+        events will be put on the campus map for all users to find. More
+        information about each event will be available with an option to
+        register to take part. After the event takes place, users will be able
+        to check-in with the hosts to confirm event attendance and receive
+        rewards.
       </p>
       <h3>Sustainable Businesses</h3>
       <p>
         Sustainify encourages business owners of all kinds to register to become
         a sustainable business and receive marked locations on our website's
-        map. We also ecourage owners to sponser incentives and rewards for
+        map. We also ecourage owners to sponsor incentives and rewards for
         active users, to promote business traffic and success in our
         sustainability efforts.
       </p>
@@ -149,5 +163,13 @@
         >CC 3.0 BY</a
       >
     </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/6.1.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
   </body>
 </html>
