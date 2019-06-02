@@ -69,7 +69,6 @@
 
     <div class="events">
       <h2>Upcoming Events</h2>
-
       <button onclick="getEvents()">See Events</button>
 
       <div id="demo"></div>
@@ -80,7 +79,7 @@
             y = "",
             i = 0;
 
-          if (count == 1) {
+          if (count == true) {
             for (i; i < events.length; i++) {
               x =
                 "<h3>" +
@@ -92,14 +91,12 @@
               document.getElementById("demo").innerHTML += x;
               count = false;
             }
+          } else {
+            document.getElementById("demo").innerHTML = "";
+            count = true;
           }
         }
-        function clearBox() {
-          document.getElementById("demo").innerHTML = "";
-          count = true;
-        }
       </script>
-      <button onclick="clearBox()">Close</button>
     </div>
 
     <div class="text">
