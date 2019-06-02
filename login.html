@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Register for sustainify
+        </title>
+    <link href="styles/register.css" rel="stylesheet">
+    <script src="userlist.js"></script>
+    <script>
+        function checkUserList(){
+            var users = USERLIST;
+            for(i=0;i<users.length;i++){
+                if (users[i].username == document.forms["myForm"]["Username"].value){
+                    if(users[i].password == document.forms["myForm"]["Password"].value){
+                        sessionStorage.setItem("data",users[i].username);
+                        window.location.href = "portal.html";
+                    }else{
+                        alert("wrong password or username");
+                        return false;
+                    }
+                }
+                else{
+                    alert("wrong password or username");
+                    return false;
+                }
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <div>
+            <a href="landing.html">Back</a>
+        </div>
+        <div id="FormTing">
+            <form id="sadform" name="myForm">
+                <div>Username:<input type = "text" name="Username"></div>
+                <br>
+                <div>Password:<input type="text" name="Password"></div>
+                <br>
+                <div><button type="button" onclick="return checkUserList()">Submit</button></div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Portal
+        </title>
+        <script src="userlist.js"></script>
+        <script src="events.js"></script>
+    </head>
+    <body>
+        <script>
+        user = sessionStorage.getItem("data");
+        users = USERLIST;
+        console.log(user);    
+        </script>
+        <div id="main">
+            <h1>
+                Your events.
+            </h1>
+        </div>
+        <script>
+        for(i=0;i<users.length;i++){
+            if(user==users[i].username){
+                for(j=0;j<users[i].events.length;j++){
+                    console.log(users[i].events.length);
+                    var writeThis = "<h3>"+users[i].events[j].event + "</h3>";
+                    document.getElementById("main").innerHTML += writeThis;
+                }
+            }
+        }
+        </script>
+    </body>
+</html>
