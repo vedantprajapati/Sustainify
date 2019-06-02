@@ -74,7 +74,7 @@
 
       <div id="demo"></div>
       <script>
-        count = 1;
+        count = true;
         function getEvents() {
           var x = "",
             y = "",
@@ -90,11 +90,16 @@
                 events[i].description +
                 "</p>";
               document.getElementById("demo").innerHTML += x;
-              count++;
+              count = false;
             }
           }
         }
+        function clearBox() {
+          document.getElementById("demo").innerHTML = "";
+          count = true;
+        }
       </script>
+      <button onclick="clearBox()">Close</button>
     </div>
 
     <div class="text">
