@@ -6,6 +6,7 @@ Sustainify is an event management and ticketing platform where students of the s
 
 ## Links:
 [https://vedantprajapati.github.io/Sustainify/](https://vedantprajapati.github.io/Sustainify/)
+
 [https://devpost.com/software/sustainify-e4hxja](https://devpost.com/software/sustainify-e4hxja)
 
 ## Team: 
